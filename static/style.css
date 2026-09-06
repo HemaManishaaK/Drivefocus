@@ -1,0 +1,96 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d0d0d;
+  color: #eaeaea;
+  margin: 0;
+  padding: 2rem;
+}
+main {
+  max-width: 640px;
+  margin: 0 auto;
+}
+h1 {
+  margin-bottom: 0.2rem;
+}
+.subtitle {
+  color: #999;
+  margin-top: 0;
+}
+section {
+  background: #161616;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+textarea {
+  width: 100%;
+  min-height: 60px;
+  box-sizing: border-box;
+  background: #0d0d0d;
+  color: #eaeaea;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  margin: 0.4rem 0 0.8rem;
+}
+label {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+button {
+  background: #2e6be5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:disabled {
+  background: #333;
+  color: #777;
+  cursor: not-allowed;
+}
+#interruptBtn {
+  width: 100%;
+  background: #b3261e;
+}
+#interruptBtn.active {
+  background: #ff453a;
+  transform: scale(0.98);
+}
+.hint {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #ccc;
+  cursor: pointer;
+}
+.checkbox-row input {
+  margin-top: 0.2rem;
+}
+.log-box #log {
+  font-family: "SF Mono", Consolas, monospace;
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.log-line {
+  padding: 0.15rem 0;
+  border-bottom: 1px solid #222;
+}
+.log-line.decision {
+  color: #7ed6a5;
+}
+.log-line.error {
+  color: #ff8b7e;
+}
