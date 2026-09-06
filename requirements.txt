@@ -1,0 +1,21 @@
+# Live Rime /ws3 connection.
+# >=13.0 required: this is the version that introduced `additional_headers`
+# on websockets.connect(), which is what rime_client.py now uses (older
+# releases used the now-deprecated `extra_headers` kwarg, still supported
+# as a fallback in code for anyone pinned below 13.0).
+websockets>=13.0
+
+# Acceptance test suite
+pytest>=7.4
+
+# Nothing extra is required for real audio output: playback_controller.py
+# writes generated speech to ./drivefocus_audio_out/*.mp3 and shells out to
+# whatever native player your OS already has (afplay / mpg123,ffplay,cvlc /
+# the default file association) — no bundled audio library dependency.
+
+# Web app (server.py): FastAPI backend + its ASGI server. uvicorn[standard]
+# pulls in its own WebSocket support (used for the browser<->server
+# connection, separate from the `websockets` package above, which is only
+# used for the server<->Rime connection).
+fastapi>=0.115
+uvicorn[standard]>=0.30
