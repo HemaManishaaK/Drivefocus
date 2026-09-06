@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DriveFocus: dry-run (all scenarios)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["--dry-run"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "DriveFocus: dry-run (single scenario)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["--dry-run", "--scenario", "roadblock_replace"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "DriveFocus: live Rime",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [],
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "DriveFocus: acceptance tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["test_acceptance.py", "-v"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
