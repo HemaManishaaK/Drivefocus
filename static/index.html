@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>DriveFocus — Live Demo</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main>
+    <h1>DriveFocus — Live Voice Demo</h1>
+    <p class="subtitle">Real Rime speech out. Real microphone in. Same decision engine underneath.</p>
+
+    <section class="instruction-box">
+      <label for="instructionText">Instruction to speak</label>
+      <textarea id="instructionText">In 300 metres, turn left onto Anna Salai and continue toward the flyover</textarea>
+      <button id="speakBtn">▶ Speak instruction</button>
+    </section>
+
+    <section class="interrupt-box">
+      <button id="interruptBtn" disabled>
+        🎙 Hold to interrupt (or hold SPACE)
+      </button>
+      <p class="hint">
+        Press and hold while the instruction is playing, say something
+        ("there's a roadblock", "what's my ETA", "no turn right instead"...),
+        then release. Route/correction interrupts automatically discard
+        first, then speak a rerouted instruction a moment later.
+      </p>
+    </section>
+
+    <audio id="player" preload="none"></audio>
+
+    <section class="log-box">
+      <h2>Log</h2>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
