@@ -6,6 +6,10 @@ interrupted, decide **discard / replace / repeat / resume** with
 word-level precision about what was actually heard — not just "stop or
 don't."
 
+## 🔗 Project Repository
+
+[DriveFocus GitHub Repository](https://github.com/HemaManishaaK/Drivefocus)
+
 Full problem statement: see `PROBLEM_STATEMENT.md`.
 
 ## Quick start (CLI demo)
